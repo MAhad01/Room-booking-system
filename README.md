@@ -10,5 +10,6 @@ It is a Bare Bone System that has the ability to both book a room and check on t
 + Define the room number
 
 ---
-
 It is a part of the project I did with **Internship Studio's C++ and Data Strustures Internship**
+
+The code is available in the master branch.
