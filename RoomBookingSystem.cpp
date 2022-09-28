@@ -29,13 +29,13 @@ void vline(char ch)
 
 void a::install()
 {
-	cout << "Enter Room no: ";
+	cout << "Enter prefered room no: ";
 	cin >> room[p].roomn;
 	cout << "\nEnter Host's name: ";
 	cin >> room[p].host;
-	cout << "\nStart time: ";
+	cout << "\nYour starting time: ";
 	cin >> room[p].start;
-	cout << "\nSession Ends at: ";
+	cout << "\nYour visit will end at: ";
 	cin >> room[p].send;
 	cout << "\nFrom: \t\t\t";
 	cin >> room[p].from;
@@ -65,7 +65,7 @@ top:
 		cin >> chair;
 		if (chair > 32)
 		{
-			cout << "\nThere are only 32 Chair available in this Room.";
+			cout << "\nThere are only 32 Chairs available in this Room.";
 		}
 		else
 		{
@@ -76,12 +76,12 @@ top:
 				break;
 			}
 			else
-				cout << "The Chair no. is already reserved.\n";
+				cout << "The Chair number is already reserved.\n";
 		}
 	}
 	if (n > p)
 	{
-		cout << "Enter correct Room  no.\n";
+		cout << "Enter correct Room  number:\n";
 		goto top;
 	}
 }
@@ -103,7 +103,7 @@ void a::show()
 {
 	int n;
 	char number[5];
-	cout << "Enter Room no: ";
+	cout << "Enter Room number: ";
 	cin >> number;
 	for (n = 0; n <= p; n++)
 
@@ -115,7 +115,7 @@ void a::show()
 
 	{
 		vline('*');
-		cout << "Room no: \t" << room[n].roomn
+		cout << "Room number: \t" << room[n].roomn
 
 			 << "\nHost: \t" << room[n].host << "\t\tStart time: \t"
 			 << room[n].start << "\t End time:" << room[n].send
@@ -132,13 +132,13 @@ void a::show()
 
 				a++;
 				if (strcmp(room[n].chair[i][j], "Empty") != 0)
-					cout << "\nThe Chair no " << (a - 1) << " is reserved for " << room[n].chair[i][j] << ".";
+					cout << "\nThe Chair number: " << (a - 1) << " is reserved for " << room[n].chair[i][j] << ".";
 			}
 		}
 		break;
 	}
 	if (n > p)
-		cout << "Enter correct Room no: ";
+		cout << "Enter correct Room number: ";
 }
 
 void a::position(int l)
@@ -174,7 +174,7 @@ void a::position(int l)
 			}
 		}
 	}
-	cout << "\n\nThere are " << p << " Chairs empty in Room No: " << room[l].roomn;
+	cout << "\n\nThere are " << p << " Chairs empty in Room number: " << room[l].roomn;
 }
 
 void a::avail()
@@ -183,7 +183,7 @@ void a::avail()
 	for (int n = 0; n < p; n++)
 	{
 		vline('*');
-		cout << "Room no: \t" << room[n].roomn << "\nHost: \t" << room[n].host
+		cout << "Room number: \t" << room[n].roomn << "\nHost: \t" << room[n].host
 			 << "\t\tStart time: \t" << room[n].start << "\tEnd  Time: \t"
 			 << room[n].send << "\nFrom: \t\t" << room[n].from << "\t\tTo: \t\t\t"
 			 << room[n].to << "\n";
